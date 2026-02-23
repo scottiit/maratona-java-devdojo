@@ -1,4 +1,4 @@
-package exerciciosGemini.jogoStarWars.domain;
+package exerciciosOutliers.jogoStarWars.domain;
 
 public class NaveEspacial {
     private String nome;

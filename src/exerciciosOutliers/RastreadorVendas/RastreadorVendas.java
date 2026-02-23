@@ -1,4 +1,4 @@
-package exerciciosGemini.RastreadorVendas;
+package exerciciosOutliers.RastreadorVendas;
 
 public class RastreadorVendas {
     public static void main(String[] args) {

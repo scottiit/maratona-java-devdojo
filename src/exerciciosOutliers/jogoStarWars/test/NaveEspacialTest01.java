@@ -1,6 +1,6 @@
-package exerciciosGemini.jogoStarWars.test;
+package exerciciosOutliers.jogoStarWars.test;
 
-import exerciciosGemini.jogoStarWars.domain.NaveEspacial;
+import exerciciosOutliers.jogoStarWars.domain.NaveEspacial;
 
 public class NaveEspacialTest01 {
     public static void main(String[] args) {
