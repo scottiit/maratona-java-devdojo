@@ -1,7 +1,7 @@
 package exerciciosOutliers.jogoStarWars.test;
 
 import exerciciosOutliers.jogoStarWars.domain.NaveEspacial;
-// testando o git push
+// testando o git push de novo
 public class NaveEspacialTest01 {
     public static void main(String[] args) {
         NaveEspacial nave01 = new NaveEspacial();
