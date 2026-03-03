@@ -5,6 +5,8 @@ public class NaveEspacial {
     private int nivelEscudo;
     private double[] poderDosCanhoes;
     private static int contadorNaves = 0;
+    private Piloto piloto;
+    private String[] tripulantes;
 
     public NaveEspacial(String nome, int nivelEscudo) {
         contadorNaves++;
@@ -14,10 +16,30 @@ public class NaveEspacial {
             return;
         }
         this.nivelEscudo = nivelEscudo;
+
+    }
+
+    public NaveEspacial(String nome, int nivelEscudo, String[] tripulantes) {
+        this(nome, nivelEscudo);
+        this.tripulantes = tripulantes;
     }
 
     public void exibirStatus() {
         System.out.println("Nave: " + this.nome);
+        if (this.piloto != null) {
+            System.out.println("Piloto: " + this.piloto.getNome());
+        } else {
+            System.out.println("Sem piloto");
+            System.out.println("Piloto automático ativado");
+        }
+        if (this.tripulantes != null) {
+            System.out.println("Tripulantes:");
+            for (String nomeTripulante : tripulantes) {
+                System.out.println("- " + nomeTripulante);
+            }
+        } else {
+            System.out.println("Nenhum tripulante");
+        }
         System.out.println("Nível do escudo: " + this.nivelEscudo);
         if (this.poderDosCanhoes == null) {
             System.out.println("Nenhum canhão encontrado");
@@ -67,5 +89,21 @@ public class NaveEspacial {
 
     public static int getContadorNaves() {
         return contadorNaves;
+    }
+
+    public Piloto getPiloto() {
+        return piloto;
+    }
+
+    public void setPiloto(Piloto piloto) {
+        this.piloto = piloto;
+    }
+
+    public String[] getTripulantes() {
+        return tripulantes;
+    }
+
+    public void setTripulantes(String[] tripulantes) {
+        this.tripulantes = tripulantes;
     }
 }

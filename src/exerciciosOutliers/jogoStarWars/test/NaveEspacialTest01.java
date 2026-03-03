@@ -1,11 +1,16 @@
 package exerciciosOutliers.jogoStarWars.test;
 
 import exerciciosOutliers.jogoStarWars.domain.NaveEspacial;
+import exerciciosOutliers.jogoStarWars.domain.Piloto;
 
 public class NaveEspacialTest01 {
     public static void main(String[] args) {
-        NaveEspacial nave01 = new NaveEspacial("Millenium Falcon", -420);
+
+        NaveEspacial nave01 = new NaveEspacial("Millenium Falcon", -420, new String[]{"adriano", "vander", "filipe"});
         nave01.setPoderDosCanhoes(new double[]{114, 362, 110, 114});
+        Piloto piloto01 = new Piloto("Han Solo");
+        nave01.setPiloto(piloto01);
+
 
         nave01.exibirStatus();
         System.out.println("Poder total dos canhões: " + nave01.calcularPoderTotal() + "\n");
