@@ -17,6 +17,8 @@ public class NaveEspacialTest01 {
 
         NaveEspacial nave02 = new NaveEspacial("X-Wing", 701);
         //nave02.poderDosCanhoes = new double[]{116, 350, 112, 100};
+        nave02.setTripulantes(new String[]{"tripu1", "tripu2", "tripu3" });
+        nave02.setTripulantes(new String[]{"tripu4", "tripu5", "tripu6" });
 
         nave02.exibirStatus();
         System.out.println("Poder total dos canhões: " + nave02.calcularPoderTotal());
