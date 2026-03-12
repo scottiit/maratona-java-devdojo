@@ -1,12 +1,12 @@
 package exerciciosOutliers.jogoStarWars.domain;
 
 public class NaveEspacial {
-    private String nome;
+    protected String nome;
     private int nivelEscudo;
     private double[] poderDosCanhoes;
-    private static int contadorNaves = 0;
     private Piloto piloto;
     private String[] tripulantes;
+    private static int contadorNaves = 0;
 
     public NaveEspacial(String nome, int nivelEscudo) {
         contadorNaves++;
