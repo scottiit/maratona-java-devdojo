@@ -3,6 +3,7 @@ package exerciciosOutliers.jogoStarWars.test;
 import exerciciosOutliers.jogoStarWars.domain.NaveDeCarga;
 import exerciciosOutliers.jogoStarWars.domain.NaveEspacial;
 import exerciciosOutliers.jogoStarWars.domain.Piloto;
+import exerciciosOutliers.jogoStarWars.domain.TipoNave;
 
 public class NaveEspacialTest01 {
     public static void main(String[] args) {
@@ -18,7 +19,7 @@ public class NaveEspacialTest01 {
         nave01.exibirCarga();
         System.out.println("-------------------------------------------------------------------");
 
-        NaveEspacial nave02 = new NaveEspacial("X-Wing", 701);
+        NaveEspacial nave02 = new NaveEspacial("X-Wing", 701, TipoNave.CAÇA);
         //nave02.poderDosCanhoes = new double[]{116, 350, 112, 100};
         nave02.setTripulantes(new String[]{"tripu1", "tripu2", "tripu3" });
         nave02.setTripulantes(new String[]{"tripu4", "tripu5", "tripu6" });

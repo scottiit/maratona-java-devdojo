@@ -4,11 +4,11 @@ public class NaveDeCarga extends NaveEspacial {
     private int capacidadeDeCarga;
 
     public NaveDeCarga(String nome, int nivelEscudo, String[] tripulantes) {
-        super(nome, nivelEscudo, tripulantes);
+        super(nome, nivelEscudo, TipoNave.CARGUEIRO, tripulantes);
     }
 
     public NaveDeCarga(String nome, int nivelEscudo, String[] tripulantes, int capacidadeDeCarga) {
-        super(nome, nivelEscudo, tripulantes);
+        super(nome, nivelEscudo, TipoNave.CARGUEIRO, tripulantes);
         this.capacidadeDeCarga = capacidadeDeCarga;
     }
 

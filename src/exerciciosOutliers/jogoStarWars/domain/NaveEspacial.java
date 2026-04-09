@@ -2,15 +2,18 @@ package exerciciosOutliers.jogoStarWars.domain;
 
 public class NaveEspacial {
     protected String nome;
+    protected TipoNave tipoNave;
     private int nivelEscudo;
     private double[] poderDosCanhoes;
     private Piloto piloto;
     private String[] tripulantes;
     private static int contadorNaves = 0;
 
-    public NaveEspacial(String nome, int nivelEscudo) {
+
+    public NaveEspacial(String nome, int nivelEscudo, TipoNave tipoNave) {
         contadorNaves++;
         this.nome = nome;
+        this.tipoNave = tipoNave;
         if (nivelEscudo < 0) {
             this.nivelEscudo = 0;
             return;
@@ -19,18 +22,17 @@ public class NaveEspacial {
 
     }
 
-    public NaveEspacial(String nome, int nivelEscudo, String[] tripulantes) {
-        this(nome, nivelEscudo);
+    public NaveEspacial(String nome, int nivelEscudo, TipoNave tipoNave, String[] tripulantes) {
+        this(nome, nivelEscudo, tipoNave);
         this.tripulantes = tripulantes;
     }
 
     public void exibirStatus() {
-        System.out.println("Nave: " + this.nome);
+        System.out.println("Nave: " + this.nome + " | Tipo: " + this.tipoNave);
         if (this.piloto != null) {
             System.out.println("Piloto: " + this.piloto.getNome());
         } else {
-            System.out.println("Sem piloto");
-            System.out.println("Piloto automático ativado");
+            System.out.println("Sem piloto | Piloto automático ativado");
         }
         if (this.tripulantes != null) {
             System.out.println("Tripulantes:");
@@ -45,6 +47,7 @@ public class NaveEspacial {
             System.out.println("Nenhum canhão encontrado");
             return;
         }
+
         int numcanhao = 0;
         for (double canhao : this.poderDosCanhoes) {
             numcanhao++;
