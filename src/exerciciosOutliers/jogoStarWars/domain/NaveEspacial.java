@@ -1,6 +1,6 @@
 package exerciciosOutliers.jogoStarWars.domain;
 
-public class NaveEspacial {
+public abstract class NaveEspacial {
     protected String nome;
     protected TipoNave tipoNave;
     private int nivelEscudo;
